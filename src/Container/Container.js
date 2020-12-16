@@ -10,7 +10,7 @@ const Container = ({ reservations, cancelReservation }) => {
   })
 
   return (
-    <section>
+    <section data-testid='reservations-container'>
       { reservationsOnDisplay }
     </section>
   )

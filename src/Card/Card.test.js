@@ -14,6 +14,7 @@ describe('Card', () => {
   }
 
   const mockCancelReservation = jest.fn()
+  
   beforeEach(() => {
     render(<Card 
             reservation={ reservationData } 
@@ -29,7 +30,7 @@ describe('Card', () => {
   it('should invoke cancel reservation', () => {
     const cancelReservationBtn = screen.getByRole('button')
     userEvent.click(cancelReservationBtn)
-    
+
     expect(mockCancelReservation).toHaveBeenCalledWith(123)
     expect(mockCancelReservation).toHaveBeenCalledTimes(1)
   })
