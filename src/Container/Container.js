@@ -1,10 +1,11 @@
 import Card from '../Card/Card'
 
-const Container = ({ reservations }) => {
+const Container = ({ reservations, cancelReservation }) => {
   const reservationsOnDisplay = reservations.map(reservation => {
     return <Card 
               key={ reservation.id } 
-              reservation={ reservation } 
+              reservation={ reservation }
+              cancelReservation={ cancelReservation } 
             />
   })
 

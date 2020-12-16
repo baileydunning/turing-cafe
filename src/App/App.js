@@ -24,12 +24,20 @@ class App extends Component {
     postReservation(reservation)
   }
 
+  cancelReservation = (id) => {
+    const filteredReservations = this.state.reservations.filter(reservation => reservation.id !== id)
+    this.setState({reservations: filteredReservations})
+  }
+
   render() {
     return (
       <main data-testid='app-body'>
         <h1>Turing Cafe</h1>
         <Form makeReservation={ this.makeReservation }/>
-        <Container reservations={ this.state.reservations } />
+        <Container 
+          reservations={ this.state.reservations }
+          cancelReservation={ this.cancelReservation } 
+        />
       </main>
     )
   }
