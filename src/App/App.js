@@ -24,6 +24,7 @@ class App extends Component {
     return (
       <main data-testid='app-body'>
         <h1>Turing Cafe</h1>
+        <Container reservations={this.state.reservations} />
       </main>
     )
   }
