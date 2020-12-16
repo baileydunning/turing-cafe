@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import Form from '../Form/Form'
+import Container from '../Container/Container'
+import Card from '../Card/Card'
 import './App.css'
 
 class App extends Component {
@@ -11,8 +14,8 @@ class App extends Component {
 
   render() {
     return (
-      <main>
-        <h1>App</h1>
+      <main data-testid='app-body'>
+        <h1>Turing Cafe</h1>
       </main>
     )
   }
