@@ -59,7 +59,7 @@ class Form extends Component {
           value={ this.state.number }
           onChange={ this.handleChange }>
         </input>
-        <button>Make Reservation</button>
+        <button data-testid='reservation-btn'>Make Reservation</button>
       </form>
     )
   }
