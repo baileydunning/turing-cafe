@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Header from '../Header/Header'
 import Form from '../Form/Form'
 import Container from '../Container/Container'
 import { getReservationData, postReservation, deleteReservation } from '../apiCalls'
@@ -33,7 +34,7 @@ class App extends Component {
   render() {
     return (
       <main data-testid='app-body'>
-        <h1>Turing Cafe</h1>
+        <Header />
         <Form makeReservation={ this.makeReservation }/>
         <Container 
           reservations={ this.state.reservations }

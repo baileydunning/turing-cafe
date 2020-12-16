@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+.header {
+  text-align: center;
+  font-family: 'Rock Salt', cursive;
+  font-size: xx-large;
+  background-color: rgb(62, 96, 62);
+  color: white;
+  height: auto;
+  letter-spacing: 10px;
+  margin-top: -43px;
+}
