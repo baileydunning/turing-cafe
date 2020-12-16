@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './Form.css'
 
 class Form extends Component {
   constructor(props) {
@@ -30,11 +31,12 @@ class Form extends Component {
 
   render() {
     return (
-      <form onSubmit={ this.handleSubmit }>
+      <form onSubmit={ this.handleSubmit } className='reservation-form'>
         <input
           type='text'
           name='name'
           placeholder='Name'
+          className='input-field'
           value={ this.state.name }
           onChange={ this.handleChange }>
         </input>
@@ -42,6 +44,7 @@ class Form extends Component {
           type='text'
           name='date'
           placeholder='Date (mm/dd)'
+          className='input-field'
           value={ this.state.date }
           onChange={ this.handleChange }>
         </input>
@@ -49,6 +52,7 @@ class Form extends Component {
           type='text'
           name='time'
           placeholder='Time'
+          className='input-field'
           value={ this.state.time }
           onChange={ this.handleChange }>
         </input>
@@ -56,10 +60,15 @@ class Form extends Component {
           type='text'
           name='number'
           placeholder='Number of guests'
+          className='input-field'
           value={ this.state.number }
           onChange={ this.handleChange }>
         </input>
-        <button data-testid='reservation-btn'>Make Reservation</button>
+        <button 
+          className='submit-btn'
+          data-testid='reservation-btn'>
+          Make Reservation
+        </button>
       </form>
     )
   }
