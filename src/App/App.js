@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Form from '../Form/Form'
 import Container from '../Container/Container'
-import { getReservationData } from '../apiCalls'
+import { getReservationData, postReservation } from '../apiCalls'
 import './App.css'
 
 class App extends Component {
@@ -19,8 +19,9 @@ class App extends Component {
     .catch(error => this.setState({error: error.message}))
   }
 
-  makeReservation = (reservation) =>{
+  makeReservation = (reservation) => {
     this.setState( { reservations: [...this.state.reservations, reservation] } )
+    postReservation(reservation)
   }
 
   render() {
