@@ -1,17 +1,17 @@
 .reservations-form {
-  display: flex;
+  display: flex !important;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  width: 100vw;
 }
 
 .input-field {
-  margin: 10px;
+  margin: 20px;
   height: 30px;
 }
 
 .submit-btn {
-  margin: 10px;
+  margin: 20px;
   background-color: rgb(62, 96, 62);
   color: white;
   height: 30px;
