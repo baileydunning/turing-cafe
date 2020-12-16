@@ -1,4 +1,5 @@
 import Card from '../Card/Card'
+import './Container.css'
 
 const Container = ({ reservations, cancelReservation }) => {
   const reservationsOnDisplay = reservations.map(reservation => {
@@ -10,7 +11,7 @@ const Container = ({ reservations, cancelReservation }) => {
   })
 
   return (
-    <section data-testid='reservations-container'>
+    <section className='reservations-container' data-testid='reservations-container'>
       { reservationsOnDisplay }
     </section>
   )
