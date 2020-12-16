@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Form from '../Form/Form'
 import Container from '../Container/Container'
-import { getReservationData, postReservation } from '../apiCalls'
+import { getReservationData, postReservation, deleteReservation } from '../apiCalls'
 import './App.css'
 
 class App extends Component {
@@ -25,6 +25,7 @@ class App extends Component {
   }
 
   cancelReservation = (id) => {
+    deleteReservation(id)
     const filteredReservations = this.state.reservations.filter(reservation => reservation.id !== id)
     this.setState({reservations: filteredReservations})
   }
